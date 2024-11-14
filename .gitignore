@@ -1,1 +1,3 @@
 env
+question_index.faiss
+questions_with_metadata.pkl
