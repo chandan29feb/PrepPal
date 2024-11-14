@@ -12,7 +12,6 @@ def get_questions():
     
     metadata = model_inference.predict(prompt)
 
-    # Load question data for search
     df = pd.read_json(config.DATA_PATH)
     filtered_df = df[(df['subject'] == metadata['subject']) &
                      (df['chapter'] == metadata['chapter']) &

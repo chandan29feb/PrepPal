@@ -15,7 +15,6 @@ class ModelInference:
             self.label_maps[label_type] = self._load_label_map(label_type)
 
     def _load_label_map(self, label_type):
-        # Logic to load label mapping for decoding predictions
         return {idx: label for label, idx in enumerate(config.LABEL_TYPES)}
 
     def predict(self, text):

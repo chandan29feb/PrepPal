@@ -23,7 +23,6 @@ class QuestionDataset(Dataset):
         }
 
 def train_model(label_type):
-    # print(os.path.isfile("../data/questions.json"))
     df = pd.read_json("./data/questions.json")
     label_map = {label: idx for idx, label in enumerate(df[label_type].unique())}
     df[f'{label_type}_label'] = df[label_type].map(label_map)
