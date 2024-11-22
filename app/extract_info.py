@@ -1,5 +1,6 @@
-from utils.prompt_template import extract_academic_info_prompt
 from langchain_groq import ChatGroq
+from langchain_core.prompts import PromptTemplate
+from utils.prompt_template import prompt_template
 from utils.config import GROQ_API_KEY
 import os 
 import json
@@ -11,6 +12,7 @@ os.environ["GROQ_API_KEY"] =GROQ_API_KEY
 llm = ChatGroq(model="llama-3.1-70b-versatile")
 
 def extract_information(input_text):
+    extract_academic_info_prompt= PromptTemplate.from_template(prompt_template)
     chain_extract = extract_academic_info_prompt | llm
     
     res = chain_extract.invoke({"user_query": input_text})
