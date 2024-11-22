@@ -5,4 +5,4 @@ sentence-transformers
 pandas
 faiss-cpu
 numpy
-dotenv
+python-dotenv
