@@ -1,7 +1,9 @@
-transformers
-torch
-flask
-pandas
+Flask
+langchain-core
+langchain-groq
 sentence-transformers
+pandas
 faiss-cpu
-spacy
+numpy
+python-dotenv
+accelerate>=0.26.0
