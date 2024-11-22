@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.services import query_embedding, search_questions
+from app.services.question_search_service import query_embedding, search_questions
 from app.extract_info import extract_information
 import json
 
@@ -12,9 +12,6 @@ def get_questions_route():
 
     try:
         extracted_values = extract_information(prompt)
-        
-        print(type(extracted_values))
-        print(extracted_values)
         
         if isinstance(extracted_values, str):
             try:

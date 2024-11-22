@@ -8,7 +8,7 @@ pip install -r requirements.txt
 3. Check for Trained Model
 if : 
     no train data
-    python app/train.py
+    python data/training/train.py
 
 4.Create .env file and Add GROQ_API_KEY
 

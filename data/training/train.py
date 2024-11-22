@@ -4,9 +4,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-from app.config import INDEX_FILE, METADATA_FILE, MODEL_NAME,DATA_FILE
+from utils.config import INDEX_FILE, METADATA_FILE, MODEL_NAME,DATA_FILE
 
 def generate_embeddings_and_index():
     model = SentenceTransformer(MODEL_NAME)
@@ -25,9 +25,9 @@ def generate_embeddings_and_index():
 
         df.to_pickle(METADATA_FILE)
 
-        print("Index and metadata saveD")
+        print("Index and metadata saved")
     else:
-        print("Index and metadata already exist.")
+        print("Index and metadata already exist")
 
 if __name__ == "__main__":
     generate_embeddings_and_index()
