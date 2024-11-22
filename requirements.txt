@@ -1,7 +1,8 @@
-transformers
-torch
-flask
-pandas
+Flask
+langchain-core
+langchain-groq
 sentence-transformers
+pandas
 faiss-cpu
-spacy
+numpy
+dotenv

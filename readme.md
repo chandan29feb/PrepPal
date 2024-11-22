@@ -1,16 +1,20 @@
 1 - Make virtual environment
 python -m venv env
-source env/bin/activate
-
+source env/Scripts/activate
 
 2 - install depenedency
 pip install -r requirements.txt
 
-3 - Run application
-python server.py
+3. Check for Trained Model
+if : 
+    no train data
+    python app/train.py
+
+4.Create .env file and Add GROQ_API_KEY
+
+5. - Run application
+python main.py
 
 
-1 - Run on local 
-2 - Repo make folder and put this code and release on server
 
 

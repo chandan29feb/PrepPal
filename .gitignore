@@ -1,3 +1,4 @@
 env
-question_index.faiss
-questions_with_metadata.pkl
+.venv
+.env
+=0.26.0
